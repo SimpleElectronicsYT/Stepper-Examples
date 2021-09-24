@@ -13,9 +13,9 @@ int secondLimit = 6;
 
 //Define some Booleans to track the limit switch statuses
 bool e1State = true;
-bool e2State = false;
+bool e2State = true;
 //Define a variable to flip around the rotation
-int revolutionVal = 0;
+int revolutionVal = 100;
 
 //Use pin 8-11 on the arduino to IN1-IN4 on the stepper board
 //Setting up the stepper
@@ -30,8 +30,6 @@ void setup() {
   pinMode(firstLimit, INPUT_PULLUP);
   pinMode(secondLimit, INPUT_PULLUP);
 
-  //Initialize the rotation variable
-  revolutionVal = 100;
 }
 
 void loop() {
