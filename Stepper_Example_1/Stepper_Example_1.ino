@@ -7,9 +7,6 @@
 //Include the Arduino stepper library
 #include <Stepper.h>
 
-//Define an input pin
-int buttonPressPin = 7;
-
 //Set how many steps it takes to make a full revolution
 //Divide the degrees per step by 360 to get the steps
 const int stepsPerRevolution = 2048;
@@ -23,7 +20,6 @@ void setup() {
   //Set the RPM of the stepper motor
   stepperName.setSpeed(5);
 
-  pinMode(buttonPressPin, INPUT_PULLUP);
 }
 
 void loop() {
